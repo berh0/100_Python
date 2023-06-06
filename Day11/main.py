@@ -33,8 +33,11 @@
 #Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
 #11 is the Ace.
 import random
-from replit import clear
+import os
 from art import logo
+
+def clear():
+  os.system('cls' if os.name == 'nt' else 'clear')
 
 def deal_card():
   """Returns a random card from the deck."""
@@ -62,8 +65,6 @@ def compare(user_score, computer_score):
   #Bug fix. If you and the computer are both over, you lose.
   if user_score > 21 and computer_score > 21:
     return "You went over. You lose "
-
-
   if user_score == computer_score:
     return "Draw "
   elif computer_score == 0:
