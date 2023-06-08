@@ -30,4 +30,3 @@ while is_on:
             if money_machine.make_payment(drink.cost):
                 # Make the drink
                 coffee_maker.make_coffee(drink)
-
