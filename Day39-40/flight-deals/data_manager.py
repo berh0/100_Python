@@ -3,6 +3,7 @@ from pprint import pprint
 import os
 
 SHEETY_PRICES_ENDPOINT = os.environ.get("SHEETY_PRICES_ENDPOINT")
+SHEETY_USERS_ENDPOINT = os.environ.get("SHEETY_USERS_ENDPOINT")
 AUTH = tuple(os.environ.get("AUTH").split())
 
 class DataManager:
@@ -32,3 +33,10 @@ class DataManager:
                 headers={"Content-Type": "application/json"}
             )
             pprint(response.text)
+        
+    def get_customer_emails(self):
+        customers_endpoint = SHEETY_USERS_ENDPOINT
+        response = requests.get(url=customers_endpoint)
+        data = response.json()
+        self.customer_data = data["users"]
+        return self.customer_data
