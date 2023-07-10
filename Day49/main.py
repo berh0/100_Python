@@ -8,8 +8,8 @@ from selenium.common.exceptions import NoSuchElementException
 from urllib.parse import unquote
 import time
 
-ACCOUNT_EMAIL = "berham10@gmail.com"
-ACCOUNT_PASSWORD = "31011430017b"
+ACCOUNT_EMAIL = ""
+ACCOUNT_PASSWORD = ""
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
