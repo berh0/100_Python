@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>{{page_num}}.Blog</h1>
+    <h2>{{ post['id'] }}</h2>
+    <h3>{{ post['title'] }}</h3>
+    <p>{{ post['subtitle'] }}</p>
+    <p>{{ post['body'] }}</p>
+    <a href="{{ url_for('home') }}">Go To Home</a>
+</body>
+</html>
